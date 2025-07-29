@@ -1,40 +1,62 @@
-# QRCodeGeneratorJS
-This is a simple QR Code Generator in JS . This allows custom image embeding.
- 
-# 🎨 Styled QR Code Generator
+# JS QR Code Generator
 
-A customizable QR code generator built with JavaScript, Tailwind CSS, and Bootstrap — featuring embedded logo support, gradient coloring, and dot style options. Export high-quality PNGs for your brand, campaign, or personal use.
+A customizable, stylish QR code generator built with JavaScript, Tailwind CSS, and Bootstrap. Supports live previews, gradient colors, dot styles, and logo embedding. Built by **Nii Abe**.
+
+## 🔥 Features
+- Live QR code preview
+- Supports gradient color styling
+- Upload & embed logos (with preview)
+- Choose dot style and size
+- PNG download
+- Live update on color/style/logo changes
+- **Dark mode toggle** 🌃
+- **Sharable QR code generator** (copy/share generated link)
+
+## 🌐 Demo
+[https://qrcodegenjs.vercel.app/]
+
+## 📸 Screenshots
+Coming soon
+
+## 📦 Technologies Used
+- JavaScript
+- [QR Code Styling Library](https://github.com/kozakdenys/qr-code-styling)
+- Tailwind CSS
+- Bootstrap 5
+
+## 🛠️ How to Use
+1. Clone the repo
+2. Open `index.html` in your browser (or use VS Code Live Server)
+3. Enter your text/URL
+4. Customize colors, styles, and upload a logo
+5. Click **Generate** to preview
+6. Click **Download PNG** to save
+7. Use **Toggle Dark Mode** to switch themes
+8. Use **Copy Shareable Link** to get a link version of your QR code
+
+## 📂 Folder Structure
+```
+project/
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+└── index.html
+```
+
+## ✍️ Author
+**Nii Abe**
 
 ---
 
-## ✨ Features
+## 🚀 Todo / Improvements
+- [x] Logo preview
+- [x] PNG download
+- [x] Live updates
+- [x] Dark mode toggle
+- [x] Shareable QR code generator
+- [ ] Save and restore last used settings
+- [ ] Export SVG
 
-- ✅ Generate QR codes from any text or URL
-- 🎨 Choose dot styles: `square`, `dots`, `rounded`, `classy`, and more
-- 🌈 Gradient support (customizable start & end colors)
-- 🖼 Upload your own **logo** (up to 5MB)
-- 🟢 Logo gets auto-rounded (masked into a circle)
-- 📐 Customize QR code size and logo size via dropdowns
-- 📥 Download as **PNG**
-
----
-
-## 🚀 Live Demo
-
-👉 [Try it out here](www.qrcodegenjs.vercel.app)
-
----
-
-## 🧱 Built With
-
-- HTML5 / JavaScript (Vanilla)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Bootstrap 5](https://getbootstrap.com/)
-- [qr-code-styling](https://github.com/kozakdenys/qr-code-styling) JS library
-
----
-
-## 🖥 Screenshots
-
-|
-
+## 📄 License
+MIT

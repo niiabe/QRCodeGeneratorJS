@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Styled QR Code Generator</title>
+  <meta name="title" content="JS QR Code Generator" />
+  <meta name="description" content="A customizable QR Code generator with styling and logo support built in JavaScript. Created by Nii Abe." />
+  <meta name="author" content="Nii Abe" />
+  <meta property="og:title" content="JS QR Code Generator" />
+  <meta property="og:description" content="Generate stylish QR codes with gradient color, dot style, and logo support. Built by Nii Abe." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>JS QR Code Generator</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,53 +24,63 @@
   <!-- QR Code Styling -->
   <script src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
 
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-gray-100 p-4">
-  <div class="container bg-white p-4 rounded shadow-lg">
-    <h1 class="text-2xl font-bold mb-4">Styled QR Code Generator</h1>
+<body class="bg-gray-100 p-4" style="font-family: 'DM Sans', sans-serif;">
+  <div class="container bg-white p-4 rounded shadow-lg" style="max-width: 600px;">
+    <h1 class="text-2xl font-bold mb-4 text-center">JS QR Code Generator</h1>
 
     <div class="mb-3">
       <label class="form-label">Enter Text / URL</label>
       <input type="text" id="qrText" class="form-control" placeholder="https://example.com" />
     </div>
 
-    <div class="mb-3">
-      <label class="form-label">QR Code Size</label>
-      <select id="qrSize" class="form-select">
-        <option value="200">200 x 200</option>
-        <option value="300" selected>300 x 300</option>
-        <option value="400">400 x 400</option>
-        <option value="500">500 x 500</option>
-        <option value="600">600 x 600</option>
-      </select>
+    <div class="mb-3 d-flex gap-3">
+      <div class="flex-grow-1">
+        <label class="form-label">Dot Style</label>
+        <select id="dotStyle" class="form-select">
+          <option value="square">Square</option>
+          <option value="dots">Dots</option>
+          <option value="rounded" selected>Rounded</option>
+          <option value="classy">Classy</option>
+          <option value="classy-rounded">Classy Rounded</option>
+          <option value="extra-rounded">Extra Rounded</option>
+        </select>
+      </div>
+
+      <div class="flex-grow-1">
+        <label class="form-label">QR Code Size</label>
+        <select id="qrSize" class="form-select">
+          <option value="200">200</option>
+          <option value="300" selected>300</option>
+          <option value="400">400</option>
+          <option value="500">500</option>
+        </select>
+      </div>
     </div>
 
-    <div class="mb-3">
-      <label class="form-label">Dot Style</label>
-      <select id="dotStyle" class="form-select">
-        <option value="square">Square</option>
-        <option value="dots">Dots</option>
-        <option value="rounded" selected>Rounded</option>
-        <option value="classy">Classy</option>
-        <option value="classy-rounded">Classy Rounded</option>
-        <option value="extra-rounded">Extra Rounded</option>
-      </select>
+    <div class="mb-3 d-flex gap-3">
+      <div class="flex-grow-1">
+        <label class="form-label">Start Color</label>
+        <input type="color" id="colorStart" value="#000000" class="form-control form-control-color" />
+      </div>
+      <div class="flex-grow-1">
+        <label class="form-label">End Color</label>
+        <input type="color" id="colorEnd" value="#FF6B6B" class="form-control form-control-color" />
+      </div>
     </div>
 
-    <div class="mb-3">
-      <label class="form-label">Start Color</label>
-      <input type="color" id="colorStart" value="#000000" class="form-control form-control-color" />
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label">End Color</label>
-      <input type="color" id="colorEnd" value="#FF6B6B" class="form-control form-control-color" />
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label">Logo Upload (max 5MB)</label>
-      <input type="file" id="logoUpload" accept="image/*" class="form-control" />
+    <!-- Logo upload + preview + reset -->
+    <div class="mb-3 row align-items-center">
+      <div class="col-8">
+        <label class="form-label">Upload Logo (max 5MB)</label>
+        <input type="file" id="logoUpload" accept="image/*" class="form-control" />
+      </div>
+      <div class="col-4 text-center">
+        <div id="logoPreview" class="border rounded bg-light" style="width: 100px; height: 100px; object-fit: contain;"></div>
+        <button id="resetLogo" class="btn btn-sm btn-outline-danger mt-2">Reset Logo</button>
+      </div>
     </div>
 
     <div class="mb-3">
@@ -81,9 +98,10 @@
       <button id="downloadBtn" class="btn btn-success">Download PNG</button>
     </div>
 
-    <div id="qrContainer" class="mt-4"></div>
+    <div id="qrContainer" class="mt-4 text-center"></div>
   </div>
 
+  <!-- JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>
