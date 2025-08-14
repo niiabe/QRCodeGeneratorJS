@@ -58,6 +58,22 @@ document.getElementById("downloadBtn").addEventListener("click", () => {
   qrCode.download({ name: "styled-qr", extension: "png" });
 });
 
+document.getElementById("downloadSvgBtn").addEventListener("click", () => {
+  if (!qrCode) {
+    alert("Generate the QR code first.");
+    return;
+  }
+  qrCode.download({ name: "styled-qr", extension: "svg" });
+});
+
+document.getElementById("downloadJpgBtn").addEventListener("click", () => {
+  if (!qrCode) {
+    alert("Generate the QR code first.");
+    return;
+  }
+  qrCode.download({ name: "styled-qr", extension: "jpg" });
+});
+
 // Logo preview + embed live
 document.getElementById("logoUpload").addEventListener("change", function () {
   const file = this.files[0];
