@@ -45,11 +45,10 @@ function updateQRCode() {
 }
 
 // Event listeners for instant updates
-["dotStyle", "qrSize", "colorStart", "colorEnd", "logoSize", "qrText"].forEach(id => {
+["dotStyle", "qrSize", "colorStart", "colorEnd", "logoSize"].forEach(id => {
   document.getElementById(id).addEventListener("change", updateQRCode);
 });
-
-document.getElementById("generateBtn").addEventListener("click", updateQRCode);
+document.getElementById("qrText").addEventListener("input", updateQRCode);
 
 document.getElementById("downloadBtn").addEventListener("click", () => {
   if (!qrCode) {
@@ -57,6 +56,22 @@ document.getElementById("downloadBtn").addEventListener("click", () => {
     return;
   }
   qrCode.download({ name: "styled-qr", extension: "png" });
+});
+
+document.getElementById("downloadSvgBtn").addEventListener("click", () => {
+  if (!qrCode) {
+    alert("Generate the QR code first.");
+    return;
+  }
+  qrCode.download({ name: "styled-qr", extension: "svg" });
+});
+
+document.getElementById("downloadJpgBtn").addEventListener("click", () => {
+  if (!qrCode) {
+    alert("Generate the QR code first.");
+    return;
+  }
+  qrCode.download({ name: "styled-qr", extension: "jpg" });
 });
 
 // Logo preview + embed live
@@ -101,3 +116,6 @@ document.getElementById("resetLogo").addEventListener("click", () => {
   liveLogoImage = null;
   updateQRCode();
 });
+
+// Initial QR code generation on page load
+document.addEventListener("DOMContentLoaded", updateQRCode);

@@ -33,7 +33,7 @@
 
     <div class="mb-3">
       <label class="form-label">Enter Text / URL</label>
-      <input type="text" id="qrText" class="form-control" placeholder="https://example.com" />
+      <input type="text" id="qrText" class="form-control" placeholder="https://example.com" value="https://example.com" />
     </div>
 
     <div class="mb-3 d-flex gap-3">
@@ -94,8 +94,9 @@
     </div>
 
     <div class="mb-3 d-flex gap-2">
-      <button id="generateBtn" class="btn btn-primary">Generate</button>
       <button id="downloadBtn" class="btn btn-success">Download PNG</button>
+      <button id="downloadSvgBtn" class="btn btn-info">Download SVG</button>
+      <button id="downloadJpgBtn" class="btn btn-warning">Download JPG</button>
     </div>
 
     <div id="qrContainer" class="mt-4 text-center"></div>
