@@ -30,7 +30,7 @@ Coming soon
 3. Enter your text/URL
 4. Customize colors, styles, and upload a logo
 5. Click **Generate** to preview
-6. Click **Download PNG** to save
+6. Click **Download PNG/SVG/JPG** to save
 7. Use **Toggle Dark Mode** to switch themes
 8. Use **Copy Shareable Link** to get a link version of your QR code
 
