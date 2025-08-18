@@ -20,7 +20,8 @@ function updateQRCode() {
       crossOrigin: "anonymous",
       imageSize: logoSize,
       hideBackgroundDots: false,
-      margin: 0,
+      margin: 4,
+      imageBackgroundColor: "#ffffff",
       imageBackgroundShape: "circle"
     },
     dotsOptions: {
