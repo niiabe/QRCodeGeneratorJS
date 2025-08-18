@@ -21,7 +21,6 @@ function updateQRCode() {
       imageSize: logoSize,
       hideBackgroundDots: false,
       margin: 4,
-      imageBackgroundColor: "#ffffff",
       imageBackgroundShape: "circle"
     },
     dotsOptions: {
