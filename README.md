@@ -55,8 +55,9 @@ project/
 - [x] Live updates
 - [x] Dark mode toggle
 - [x] Shareable QR code generator
-- [ ] Save and restore last used settings
-- [ ] Export SVG
+- [x] Save and restore last used settings
+- [x] Export SVG
+- [x] Custom Fonts (DM Serif Display)
 
 ## 📄 License
 MIT
